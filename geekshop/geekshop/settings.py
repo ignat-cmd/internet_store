@@ -56,7 +56,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': True, # ищет шаблоны в папках mainapp
+        'APP_DIRS': True,  # ищет шаблоны в папках mainapp
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -121,7 +121,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / 'static',
 ]
 
 # Default primary key field type
