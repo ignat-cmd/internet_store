@@ -1,30 +1,33 @@
 import json
 from django.shortcuts import render
+from .models import ProductCategory, Product
 
 # Create your views here.
 
 MENU_LINKS = [
     {'url': 'index', 'name': 'домой'},
-    {'url': 'products', 'name': 'продукты'},
+    {'url': 'products:main', 'name': 'продукты'},
     {'url': 'contact', 'name': 'контакты'},
 ]
 
 
 def index(request):
+    products_site = Product.objects.all()
     return render(request, 'mainapp/index.html', context={
         'title': 'главная',
         'menu_links': MENU_LINKS,
+        'products_site': products_site,
 
     })
 
 
-def products(request):
-    with open('./menu_product.json', 'r') as file:
-        menu_product = json.load(file)
+def products(request, pk=None):
+    print(pk)
+    category = ProductCategory.objects.all()
     return render(request, 'mainapp/products.html', context={
         'title': 'продукты',
         'menu_links': MENU_LINKS,
-        'menu_product': menu_product,
+        'category': category,
     })
 
 
