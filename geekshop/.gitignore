@@ -1,0 +1,14 @@
+# Игонр базы данных
+db.sqlite3
+
+#mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+.vscode
+media
+data.json
