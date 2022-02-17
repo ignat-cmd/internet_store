@@ -27,7 +27,7 @@ def products(request, pk=None):
     return render(request, 'mainapp/products.html', context={
         'title': 'продукты',
         'menu_links': MENU_LINKS,
-        'category': category,
+        'category': category[:4],
     })
 
 
