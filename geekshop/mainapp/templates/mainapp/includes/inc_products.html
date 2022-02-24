@@ -1,0 +1,11 @@
+{% for product in products_site %}
+<div class="block">
+    <a href="#"><img class="block" src="/media/{{ product.image }}" alt=""> 
+        <div class="text">
+            <img src="/media/{{ product.image }}" alt="img">
+            <h4>{{ product.category.name }}</h4>
+            <p>{{ product.category.description }}</p>
+        </div> 
+    </a>
+</div>
+{% endfor %}
