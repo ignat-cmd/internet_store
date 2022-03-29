@@ -17,9 +17,12 @@ def login(request):
             username = request.POST['username']
             password = request.POST['password']
 
-            user = auth.authenticate(username=username, password=password)
+            user = auth.authenticate(
+                request, username=username, password=password)
             if user and user.is_active:
                 auth.login(request, user)
+                if 'next' in request.GET.keys():
+                    return HttpResponseRedirect(request.GET['next'])
                 return HttpResponseRedirect(reverse('index'))
     else:
         login_form = ShopUserLoginForm()

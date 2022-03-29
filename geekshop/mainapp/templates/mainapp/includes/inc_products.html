@@ -1,6 +1,6 @@
 {% for product in products %}
     <div class="block">
-        <a href="{% url 'basket:add' product.id %}"><img class="block" src="/media/{{ product.image }}" alt=""> 
+        <a href="{% url 'products:product' product.id %}"><img class="block" src="/media/{{ product.image }}" alt=""> 
             <div class="text">
                 <img src="/media/{{ product.image }}" alt="img">
                 <h4>{{ product.category.name }}</h4>
