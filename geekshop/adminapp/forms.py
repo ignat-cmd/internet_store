@@ -5,7 +5,13 @@ from authapp.models import ShopUser
 from mainapp.models import ProductCategory
 
 
-class ShopUserAdminForm(ShopUserEditForm):
+class ShopUserEditAdminForm(ShopUserEditForm):
+    class Meta:
+        model = ShopUser
+        fields = '__all__'
+
+
+class ShopUserCreateAdminForm(ShopUserRegisterForm):
     class Meta:
         model = ShopUser
         fields = '__all__'
@@ -19,8 +25,8 @@ class ProductCategoryAdminForm(forms.ModelForm):
 # Так как используем bootstrap нужно это:
 
 
-def __init__(self, *args, **kwargs):
-    super().__init__(*args, **kwargs)
-    for field_name, field in self.field.items():
-        field.wiget.attrs['class'] = 'form_control'
-        field.help_text = ''
+# def __init__(self, *args, **kwargs):
+#     super().__init__(*args, **kwargs)
+#     for field_name, field in self.field.items():
+#         field.wiget.attrs['class'] = 'form_control'
+#         field.help_text = ''
