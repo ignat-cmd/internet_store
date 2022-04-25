@@ -1,6 +1,17 @@
-{% for item in basket %}
-    {{ item }} <a href="{% url 'basket:remove' item.id %}">Delete</a>
-</br>
-{% endfor %}
-<br/>
-В корзине {{ basket|length }} товаров
+{% extends 'basketapp/base.html' %}
+{% load static %}
+
+{% block js %}
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/basket_scripts.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="basket_list">
+    {% include 'basketapp/includes/inc_basket_list.html' %}
+    </div>
+
+    <button class="btn btn-round">
+        <a href="{% url 'index' %}">на главную</a>
+    </button>
+{% endblock %}
