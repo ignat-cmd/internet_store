@@ -1,10 +1,17 @@
 from django.shortcuts import render, HttpResponseRedirect
-from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditForm
+from authapp.forms import (ShopUserLoginForm,
+                            ShopUserRegisterForm,
+                            ShopUserEditForm,
+                            ShopUserProfileEditForm,
+)
+
 from django.contrib import auth
 from django.urls import reverse
 from django.core.mail import send_mail
 from django.conf import settings
 from authapp.models import ShopUser
+from django.db import transaction
+
 
 
 
@@ -65,21 +72,27 @@ def register(request):
     })
 
 
+@transaction.atomic #то же самое что в sql
 def edit(request):
     title = 'Редактирование'
 
     if request.method == 'POST':
-        edit_form = ShopUserEditForm(
-            request.POST, request.FILES, instance=request.user)
-        if edit_form.is_valid():
+        edit_form = ShopUserEditForm(request.POST, request.FILES, \
+        instance=request.user)
+        profile_form = ShopUserProfileEditForm(request.POST, \
+        instance=request.user.shopuserprofile)
+        if edit_form.is_valid() and profile_form.is_valid():
             edit_form.save()
             return HttpResponseRedirect(reverse('auth:edit'))
     else:
         edit_form = ShopUserEditForm(instance=request.user)
-
+        profile_form = ShopUserProfileEditForm(
+        instance=request.user.shopuserprofile
+        )
     return render(request, 'authapp/edit.html', context={
         'edit_form': edit_form,
         'title': title,
+        'profile_form': profile_form,
     })
 
 def send_verify_mail(user):
@@ -95,9 +108,9 @@ def verify(request, email, activation_key):
     if user.activation_key == activation_key and not user.is_activation_key_expired():
         user.is_active = True
         user.save()
-        auth.login(request, user)
+        auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
         return render(request, 'authapp/verification.html')
     else:
         print(f'error activation user: {user}')
         return render(request, 'authapp/verification.html')
-   
+
