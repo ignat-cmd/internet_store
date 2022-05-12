@@ -1,3 +1,4 @@
+
 {% if products %}
   {% if products.has_previous %}
   <a href="{% url 'products:category_with_page' category.pk products.previous_page_number %}"> сюда </a>
@@ -15,6 +16,17 @@
       <img src="/media/{{ product.image }}" alt="img" />
       <h4>{{ product.category.name }}</h4>
       <p>{{ product.category.description }}</p>
+
+% for product in products %}
+    <div class="block">
+        <a href="{% url 'basket:add' product.id %}"><img class="block" src="/media/{{ product.image }}" alt=""> 
+            <div class="text">
+                <img src="/media/{{ product.image }}" alt="img">
+                <h4>{{ product.category.name }}</h4>
+                <p>{{ product.category.description }}</p>
+            </div> 
+        </a>
+
     </div>
   </a>
 </div>
