@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IEFiYW1hNzc=?=
+From: django@localhost
+To: abama@localhost
+Date: Mon, 25 Apr 2022 20:32:10 -0000
+Message-ID: 
+ <165091873023.4222.11119797233165976763@41.50.168.192.in-addr.arpa>
+
+Для подтверждения учетной записи Abama77 на портале http://localhost:8000 перейдите по ссылке: http://localhost:8000/auth/verify/abama@localhost/feb29d3a2de72c8f080f41631ad5b43d6ba3a677/
+-------------------------------------------------------------------------------

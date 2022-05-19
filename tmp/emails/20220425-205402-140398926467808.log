@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IGFuZHI=?=
+From: django@localhost
+To: andr@localhost
+Date: Mon, 25 Apr 2022 20:54:02 -0000
+Message-ID: 
+ <165092004214.4777.13777357317547111828@41.50.168.192.in-addr.arpa>
+
+Для подтверждения учетной записи andr на портале http://localhost:8000 перейдите по ссылке: http://localhost:8000/auth/verify/andr@localhost/993f42521ffe4d65f3e1b6f16670ab4c2ee28f71/
+-------------------------------------------------------------------------------

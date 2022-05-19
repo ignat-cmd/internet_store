@@ -1,0 +1,13 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IE5hc3R5YQ==?=
+From: django@localhost
+To: nastya@localhost
+Date: Mon, 25 Apr 2022 20:49:52 -0000
+Message-ID: <165091979275.4673.5400552514384929751@41.50.168.192.in-addr.arpa>
+
+Для подтверждения учетной записи Nastya на портале http://localhost:8000 перейдите по ссылке: http://localhost:8000 /auth/verify/nastya@localhost/53e56b510645f20b7fad652636708ba868a7d6ec/
+-------------------------------------------------------------------------------

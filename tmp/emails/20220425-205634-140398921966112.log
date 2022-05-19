@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IG1pc2g=?=
+From: django@localhost
+To: mish@localhost
+Date: Mon, 25 Apr 2022 20:56:34 -0000
+Message-ID: 
+ <165092019487.4777.16312975862663798600@41.50.168.192.in-addr.arpa>
+
+Для подтверждения учетной записи mish на портале http://localhost:8000 перейдите по ссылке: http://localhost:8000/auth/verify/mish@localhost/33a29d8436de6a6ec896b49a8708ecef0d58ded9/
+-------------------------------------------------------------------------------
